@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Three.js + Tailwind in Django</title>
+
+  <!-- ✅ Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+
+<!-- 
+  <style>
+    body { margin: 0; }
+    canvas { display: block; }
+  </style> -->
+</head>
+
+<body>
+<!-- {% include 'header.html'%} -->
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-warning" role="alert">
+                {{ message }}
+        </div>
+    {% endfor %}
+{%endif%}
+
+{% block content %}
+{% endblock %}
+
+</body>
